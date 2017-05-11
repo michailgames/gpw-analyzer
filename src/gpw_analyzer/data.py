@@ -11,7 +11,7 @@ class Candle(object):
         return self.opening > self.closing
 
     def is_white(self):
-        return self.opening <= self.closing
+        return self.opening < self.closing
 
 
 class Chart(object):
