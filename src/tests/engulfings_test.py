@@ -28,6 +28,10 @@ class Test(unittest.TestCase):
         candles = [Candle(9, 5, 4, 10, 100), Candle(5, 10, 3, 11, 100)]
         self.assertFalse(engulfings.is_prosperity_engulfing(candles))
 
+    def test_no_prosperity_engulfing_for_less_than_two_candles(self):
+        candles = [Candle(1, 1, 1, 1, 10)]
+        self.assertFalse(engulfings.is_prosperity_engulfing(candles))
+
 
 if __name__ == "__main__":
     unittest.main()
